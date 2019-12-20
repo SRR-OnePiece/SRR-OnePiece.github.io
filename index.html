@@ -1,14 +1,13 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
+<html><head>
+		<meta charset="utf-8">
 		<title>The Colorless Chat</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-		<link rel="stylesheet" type="text/css" href="/css/BorderlessStyle.css?v=0.6.1" />
-		<link rel="stylesheet" type="text/css" href="/css/BorderlessMini.css?v=0.2" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" type="text/css" href="/css/BorderlessStyle.css?v=0.6.1">
+		<link rel="stylesheet" type="text/css" href="/css/BorderlessMini.css?v=0.2">
 
-		<script src="/js/vendor/json2.js"></script>
+		<script src="//www.google-analytics.com/ga.js"></script><script src="/js/vendor/json2.js"></script>
 		<script src="/js/vendor/jquery.js"></script>
 		<script src="/js/vendor/signals.js"></script>
 		<script src="/js/vendor/director.js"></script>
@@ -28,19 +27,19 @@
 		</script>
 	</head>
 	<body>
-		<div id="loading"><img src="/img/loading.gif" alt="Communicating&hellip;" width="32" height="32" /></div>
+		<div id="loading" style="display: none;"><img src="/img/loading.gif" alt="Communicating…" width="32" height="32"></div>
 
 		<div id="wrapper">
 			<div id="header">
 				<div id="nav">
 					<ul class="top-menu">
 						<li class="dropdown">
-								<a class="dropdown-toggle current-channel" data-toggle="dropdown" href="#">Channel: /main/</a>
-								<ul class="dropdown-menu channels"></ul>
+								<a class="dropdown-toggle current-channel" data-toggle="dropdown" href="#">Channel: /ru/</a>
+								<ul class="dropdown-menu channels"><li class="new-channel">Create a new channel</li><li><a href="#/channel/main">/main/</a></li><li><a href="#/channel/ru">/ru/</a></li><li><a href="#/channel/th">/th/</a></li></ul>
 						</li>
 						<li class="dropdown">
 								<a class="dropdown-toggle current-color" data-hex="null" data-toggle="dropdown" href="#">Color: Custom</a>
-								<ul class="dropdown-menu colors"></ul>
+								<ul class="dropdown-menu colors"><li data-hex="222223">Black</li><li data-hex="d68f19">Orange</li><li data-hex="5d9dc2">Blue</li><li data-hex="3c629b">Dark blue</li><li data-hex="920003">Red</li><li data-hex="95005c">Magenta</li><li data-hex="1d8140">Green</li><li data-hex="717171">Grey</li><li data-hex="777137">Mud Green</li><li data-hex="3c1773">Purple</li><li data-hex="5ab800">Lime green</li><li data-hex="null">Custom</li></ul>
 						</li>
 						<!--
 						<li class="dropdown">
@@ -71,37 +70,31 @@
 					</ul>
 				</div>
 				<form class="publish" method="post" action="/chat/pub">
-					<input class="message" type="text" autocomplete="off" />
+					<input class="message" type="text" autocomplete="off">
 					<button>Post!</button>
 				</form>
 			</div>
 
 			<div class="page">
-				<a href="#" class="back">&laquo; Back to the messages</a>
+				<a href="#/channel/ru" class="back" style="display: none;">« Back to the messages</a>
 
-				<ul class="subscription"></ul>
+				
 
-				<div class="users">
-					<ul></ul>
-				</div>
+				
 
-				<div class="auth">
-					<p>You are not logged in, possibly even not registered on the Colorless yet. You can go back and post as an anonymous user, but you will have an auto-generated name.</p>
-				</div>
+				
 
-				<div class="activity">
-					<div class="activity-chart"></div>
-				</div>
-			</div>
+				
+			<ul class="subscription"><li class="info disconnect"><abbr title="Here you disconnected. There might be messages that you did not receive while you were offline.">…</abbr></li></ul></div>
             <iframe src="http://radio.thecolorless.net" id="radio"></iframe>
 			<div id="footer">
 				<ul>
 					<li>
-						<span class="status">&ndash;</span>
+						<span class="status">–</span>
 					</li>
 					<li>
 						Online:
-						<span class="online">&ndash;</span>
+						<span class="online">2</span>
 					</li>
 					<li>
 						<a href="javascript:;" data-toggle="export">Export</a>
@@ -113,7 +106,7 @@
 			</div>
 		</div>
 
-		<audio autobuffer id="bling" style="visibility:hidden"><source src="/bling.ogg"><source src="/bling.mp3"></audio>
+		<audio autobuffer="" id="bling" style="visibility:hidden"><source src="/bling.ogg"><source src="/bling.mp3"></audio>
 
 		<script>
 			window._gaq  = [['_setAccount','UA-7104252-6'],['_trackPageview'],['_trackPageLoadTime'],['_setDomainName', '.thecolorless.net']];
@@ -121,5 +114,6 @@
 			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 			s.parentNode.insertBefore(g,s)}(document,'script'));
 		</script>
-	</body>
-</html>
+	
+
+</body></html>
